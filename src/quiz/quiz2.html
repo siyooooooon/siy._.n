@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Quiz2</title>
+</head>
+<body>
+
+<!--
+백준 9498번 문제
+시험 점수를 입력받아
+90~100점 A
+80~89점 B
+70~79점 C
+60~69점 D
+나머지는 F 출력하는 프로그램 작성
+-->
+<script>
+    let scoreNum = Math.floor(Math.random() * 101);
+    console.log(scoreNum);
+	/*let scoreNum = 5;*/
+
+    if ( 90 <= scoreNum ) {
+        console.log('A');
+    } else if ( 80 <= scoreNum ) {
+        console.log('B');
+    } else if ( 70 <= scoreNum ) {
+        console.log('C');
+    } else if ( 60 <= scoreNum ) {
+        console.log('D');
+    } else {
+        console.log('F');
+    }
+</script>
+</body>
+</html>

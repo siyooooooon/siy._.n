@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Quiz3</title>
+</head>
+<body>
+<!--
+백준 2753번 문제
+연도가 주어졌을 때 윤년이면 1, 아니면 0 출력하는 프로그램
+윤년은 연도가 4의 배수이면서 100의배수가 아닐때 또는 400의 배수일 때이다
+연도는 1보다 크거나 같고 4000보다 작거나 같은 자연수
+-->
+<script>
+	let leapYear = Math.floor(Math.random() * 4001);
+	//let leapYear = 2000;
+	console.log(leapYear);
+
+	if (( leapYear % 4 === 0 ) && ( leapYear % 100 !== 0 ) || ( leapYear % 400 === 0 )){
+        console.log(1);
+    } else {
+        console.log(0);
+	}
+
+</script>
+</body>
+</html>

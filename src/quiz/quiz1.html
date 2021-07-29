@@ -2,9 +2,43 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Title</title>
+	<title>Quiz1</title>
 </head>
 <body>
+	<!--
+	백준 1330번 문제
+	두 정수 A와 B가 주어졌을 때, A와 B를 비교하는 프로그램작성
+	첫째 줄에 A와 B가 주어진다. A와 B는 공백 한 칸으로 구분되어져있다.
 
+	A가 B보다 큰 경우에는 '>'를 출력한다.
+	A가 B보다 작은 경우에는 '<'를 출력한다.
+	A와 B가 같은 경우에는 '=='를 출력한다.
+	-->
+
+	<script>
+
+		let numArray = [];
+
+		for ( let i = 0; i < 2; i++ ) {
+            numArray[i] = parseInt(prompt('숫자를 입력해 주세요'));
+		}
+
+		const compareValue = function() {
+            for ( let i = 0; i < numArray.length; i++ ) {
+                if ( numArray[0] > numArray[1] ) {
+                    console.log('>');
+                }
+                if ( numArray[0] < numArray[1] ) {
+                    console.log('<');
+                }
+                if ( numArray[0] === numArray[1] ) {
+                    console.log('==');
+                }
+
+            }
+		};
+
+		compareValue();
+	</script>
 </body>
 </html>
