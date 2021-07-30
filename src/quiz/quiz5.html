@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Quiz5</title>
+</head>
+<body>
+<!--
+백준 1000번 문제
+두 정수 A와 B를 입력받은 다음, A+B를 출력하는 프로그램을 작성하시오.
+-->
+
+<script>
+    let numA = prompt('숫자를 입력해주세요');
+    let numB = prompt('숫자를 입력해주세요');
+
+	if (0 < numA && numB < 10 ) {
+        const plusNum = function () {
+            return parseInt(numA) + parseInt(numB);
+        };
+        document.write(plusNum());
+	} else {
+        alert('1 ~ 9까지 숫자를 입력해주세요');
+        location.reload();
+	}
+
+</script>
+</body>
+</html>

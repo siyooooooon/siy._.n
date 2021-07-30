@@ -12,6 +12,7 @@ N을 입력받은 뒤, 구구단 N단을 출력하는 프로그램을 작성하�
 <script>
 
     let multipleNumber = parseInt(prompt('숫자를 입력해 주세요'));
+
     if (1 < multipleNumber && multipleNumber <= 9) {
         document.write(multipleNumber + '단' + '<br>');
 
@@ -19,7 +20,8 @@ N을 입력받은 뒤, 구구단 N단을 출력하는 프로그램을 작성하�
             document.write(multipleNumber + '*' + i + '=' + multipleNumber*i + '<br>');
         }
     } else {
-        
+        alert('2 ~ 9까지 숫자를 입력해주세요');
+        location.reload();
     }
 
 
