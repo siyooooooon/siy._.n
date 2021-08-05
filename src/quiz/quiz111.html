@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Quiz7</title>
+</head>
+<body>
+<!--
+백준 2741번 문제
+자연수 N이 주어졌을 때, 1부터 N까지 한 줄에 하나씩 출력하는 프로그램을 작성하시오.
+100,000보다 작거나 같은 자연수 N이 주어진다.
+-->
+<script>
+
+    let randomNum = Math.floor(Math.random() * 101); //자연수 100까지로 변경
+    //let randomNum = 10;
+    let numValue = '';
+
+    for ( let i = 0; i <= randomNum; i++) {
+        numValue += i + '<br>';
+    }
+    document.write('자연수 N =' + randomNum + '<br>');
+    document.write(numValue);
+
+</script>
+</body>
+</html>
