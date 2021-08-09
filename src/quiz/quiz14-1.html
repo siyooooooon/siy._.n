@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quiz14-1</title>
+</head>
+<body>
+<!--
+두 정수 A와 B를 입력받은 다음, A+B를 출력하는 프로그램을 작성하시오.
+입력은 여러 개의 테스트 케이스로 이루어져 있다.
+각 테스트 케이스는 한 줄로 이루어져 있으며, 각 줄에 A와 B가 주어진다. (0 < A, B < 10)
+입력의 마지막에는 0 두 개가 들어온다.
+-->
+<script>
+
+   /* const starArray = [];
+
+    for(let i = 0; i < 5; i++){
+        starArray[i] = parseInt(prompt((i+1) + '번째 숫자를 입력해주세요'));
+    } //숫자 입력 받기
+*/
+
+   /* let testNum = Math.floor(Math.random() * 11);
+    for (let i = 0; i <= testNum; i++) {
+        let numA = prompt('숫자를 입력해주세요');
+        let numB = prompt('숫자를 입력해주세요');
+
+        if (0 < numA && numB < 10) {
+            const plusNum = function () {
+                return parseInt(numA) + parseInt(numB)
+            };
+            document.write(plusNum());
+        } else {
+            alert('1 ~ 9까지 숫자를 입력해주세요')
+            location.reload();
+        }
+    }*/
+
+   //const plusArray = [];
+   const testNum = 5;
+   const arrA = [];
+   const arrB = [];
+   for (let i = 0; i < testNum; i++) {
+       arrA[i] = parseInt(prompt('숫자를 입력해주세요'));
+       arrB[i] = parseInt(prompt('숫자를 입력해주세요'));
+       arrA.push(0);
+       arrB.push(0);
+       if (0 < arrA[i] && arrB[i] < 10) {
+           let arrResult = [];
+           for (let i = 0; i < testNum.length; i++) {
+               arrResult = arrA[0] + arrB[0];
+           }
+           console.log(arrResult);
+       } else {
+           alert('1 ~ 9까지 숫자를 입력해주세요')
+           location.reload();
+       }
+   }
+   /*console.log('A배열' + arrA);
+   console.log('B배열' + arrB);*/
+   console.log(arrA);
+   console.log(arrB);
+
+
+
+</script>
+</body>
+</html>
