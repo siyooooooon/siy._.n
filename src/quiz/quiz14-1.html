@@ -6,6 +6,7 @@
 </head>
 <body>
 <!--
+백준 10952번 문제
 두 정수 A와 B를 입력받은 다음, A+B를 출력하는 프로그램을 작성하시오.
 입력은 여러 개의 테스트 케이스로 이루어져 있다.
 각 테스트 케이스는 한 줄로 이루어져 있으며, 각 줄에 A와 B가 주어진다. (0 < A, B < 10)
@@ -45,12 +46,15 @@
        arrB[i] = parseInt(prompt('숫자를 입력해주세요'));
        arrA.push(0);
        arrB.push(0);
+
        if (0 < arrA[i] && arrB[i] < 10) {
-           let arrResult = [];
-           for (let i = 0; i < testNum.length; i++) {
-               arrResult = arrA[0] + arrB[0];
+           let result = '';
+           for (let i = 0; i < arrA.length; i++) {
+               result = arrA[i] + arrB[i];
+
            }
-           console.log(arrResult);
+           console.log(result);
+
        } else {
            alert('1 ~ 9까지 숫자를 입력해주세요')
            location.reload();
