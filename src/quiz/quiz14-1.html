@@ -50,10 +50,9 @@
        if (0 < arrA[i] && arrB[i] < 10) {
            let result = '';
            for (let i = 0; i < arrA.length; i++) {
-               result = arrA[i] + arrB[i];
-
+               //result = arrA[i] + arrB[i];
+               console.log(Number(arrA[i]) + Number(arrB[i]));
            }
-           console.log(result);
 
        } else {
            alert('1 ~ 9까지 숫자를 입력해주세요')
