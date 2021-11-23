@@ -14,6 +14,32 @@
 -->
 <script>
 
+    const fs = require("fs");
+    const [...arr] = (process.platform === "linux" ? fs.readFileSync("/dev/stdin").toString() : `1 1
+1 1
+2 3
+3 4
+9 8
+5 2
+`
+)
+		.trim()
+		.split("\n");
+
+answer = "";
+i = 0;
+while (i <= arr.length - 1) {
+	let A = parseInt(arr[i].split(" ")[0]);
+	let B = parseInt(arr[i].split(" ")[1]);
+	if (A !== 0 || B !== 0) {
+		answer += `${A + B}` + "\n";
+	} else {
+		break; // "" or " " 도 정답처리된다.
+	}
+	i++;
+}
+
+console.log(answer);
 </script>
 </body>
 </html>
