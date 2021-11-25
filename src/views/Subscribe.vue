@@ -9,7 +9,22 @@
 				<div v-for="(item, index) in subscriberList" :key="index" class="subscriber">
 					<textarea v-model="showSentence"></textarea>
 					<div class="btn-wrap">
-						<b-button variant="outline-success" @click="onSubscribe">구독</b-button>
+						<template v-if="subscriberType === '구독자'">
+							<b-button variant="outline-success" @click="unSubscribe">
+								구독 취소
+							</b-button>
+						</template>
+						<template v-else>
+							<b-button variant="outline-success" @click="onSubscribe">
+								구독
+							</b-button>
+						</template>
+						<!--<b-button variant="outline-success" @click="onSubscribe" v-if="subscriberType === '비구독자' ? buttonName === '구독' : buttonName ==='구독 취소'">
+							{{ buttonName }}
+						</b-button>-->
+						<!--<b-button variant="outline-success" @click="onSubscribe">
+							{{ buttonName }}
+						</b-button>-->
 					</div>
 				</div>
 			</div>
@@ -25,15 +40,43 @@
             return {
                 inputSentence: '',
 	            showSentence: '',
-                subscriberList: [{},{},{}],
+                subscriberList: [
+                    {
+                        text: '',
+						seq: 2021,
+                        isSubscribe: false
+                    },
+                    {
+                        text: '',
+                        seq: 2054,
+                        isSubscribe: false
+                    },
+                    {
+                        text: '',
+                        seq: 3000,
+                        isSubscribe: false
+                    }
+                ],
+                subscriberType: '비구독자',
+	            buttonName: '구독',
             }
 	    },
 	    methods: {
             async onSubscribe() {
-                this.onSubscribe()
+	            //this.buttonName = '구독 취소'
+                this.subscriberType = '구독자';
+                this.buttonName = '구독 취소';
+                console.log('구독자', this.subscriberType);
+            },
+            async unSubscribe() {
+                //this.buttonName = '구독 취소'
+                this.subscriberType = '비구독자';
+                console.log('비구독자', this.subscriberType);
             },
 		    async submitSentence() {
-                this.showSentence = this.inputSentence;
+                if(this.subscriberType === '구독자') {
+                    this.showSentence = this.inputSentence;
+                }
 		    },
 	    },
     }
