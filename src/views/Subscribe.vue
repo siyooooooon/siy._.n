@@ -9,16 +9,19 @@
 				<div v-for="(item, index) in subscriberList" :key="index" class="subscriber">
 					<textarea v-model="showSentence"></textarea>
 					<div class="btn-wrap">
-						<template v-if="subscriberType === '구독자'">
-							<b-button variant="outline-success" @click="unSubscribe">
+						<b-button v-model="btnState" :variant="btnState.variant" @click="editSubscribeType(index)">
+							{{ buttonName }}
+						</b-button>
+						<!--<template v-if="subscriberType === '구독자'">
+							<b-button variant="outline-success" @click="unSubscribe(index)">
 								구독 취소
 							</b-button>
 						</template>
 						<template v-else>
-							<b-button variant="outline-success" @click="onSubscribe">
+							<b-button variant="outline-success" @click="onSubscribe(index)">
 								구독
 							</b-button>
-						</template>
+						</template>-->
 						<!--<b-button variant="outline-success" @click="onSubscribe" v-if="subscriberType === '비구독자' ? buttonName === '구독' : buttonName ==='구독 취소'">
 							{{ buttonName }}
 						</b-button>-->
@@ -59,22 +62,41 @@
                 ],
                 subscriberType: '비구독자',
 	            buttonName: '구독',
+                btnState: {
+                    variant: 'outline-primary',
+                }
             }
 	    },
 	    methods: {
-            async onSubscribe() {
+            async editSubscribeType(index) {
 	            //this.buttonName = '구독 취소'
-                this.subscriberType = '구독자';
-                this.buttonName = '구독 취소';
-                console.log('구독자', this.subscriberType);
+                /*this.subscriberType = '구독자';
+                this.subscriberList[index] = '구독 취소';
+                console.log('구독자', this.subscriberType);*/
+
+                if(this.buttonName === '구독') {
+                    this.subscriberType = '구독자';
+                    this.buttonName = '구독 취소';
+                    this.subscriberList[index] = this.buttonName;
+                    this.btnState.variant = 'outline-danger';
+                    console.log('구독자', this.subscriberType);
+                } else {
+                    //this.buttonName = '구독자';
+                    this.subscriberType = '비구독자';
+                    this.buttonName = '구독';
+                    this.subscriberList[index] = this.buttonName;
+                    this.btnState.variant = 'outline-primary';
+                    console.log('비구독자', this.subscriberType);
+                }
             },
-            async unSubscribe() {
+          /*  async unSubscribe() {
                 //this.buttonName = '구독 취소'
                 this.subscriberType = '비구독자';
                 console.log('비구독자', this.subscriberType);
-            },
+            },*/
 		    async submitSentence() {
                 if(this.subscriberType === '구독자') {
+
                     this.showSentence = this.inputSentence;
                 }
 		    },

@@ -1,5 +1,5 @@
 <template>
-	<div>
+	<div id="app">
 		<Subscribe></Subscribe>
 	</div>
 </template>
@@ -8,6 +8,7 @@
 import Subscribe from './views/Subscribe.vue'
 
 export default {
+    name: 'App',
     components: {
         Subscribe,
     },
