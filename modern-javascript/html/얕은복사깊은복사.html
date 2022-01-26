@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>얕은 복사 깊은 복사</title>
+</head>
+<body>
+
+<script>
+	/*
+	객체를 프로퍼티 값으로 갖는 객체의 경우
+	shallow copy - 한 단계까지만 복사
+	deep copy - 깊은 복사는 객체에 중첩되어있는 객체까지 모두 복사
+	*/
+
+	const o = { x: { y: 1 } };
+
+	//얕은 복사
+	const c1 = { ...o }; //스프레드 문법
+	console.log('c1 === o',c1 === o);
+	console.log('c1.x === o.x',c1.x === o.x);
+
+	//const _ = require('lodash');
+
+</script>
+</body>
+</html>

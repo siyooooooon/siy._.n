@@ -1,16 +1,16 @@
 <template>
 	<div id="app">
-		<Subscribe></Subscribe>
+		<Main />
 	</div>
 </template>
 
 <script>
-import Subscribe from './views/Subscribe.vue'
+import Main from './views/Main.vue'
 
 export default {
     name: 'App',
     components: {
-        Subscribe,
+        Main,
     },
 }
 </script>

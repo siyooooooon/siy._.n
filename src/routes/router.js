@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import Router from 'vue-router';
 
-import Subscribe from "../views/Subscribe";
+import Subscribe from "../components/Subscribe";
 
 Vue.use(Router);
 
