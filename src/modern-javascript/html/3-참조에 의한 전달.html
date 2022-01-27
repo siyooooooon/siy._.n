@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>참조에 의한 전달</title>
+</head>
+<body>
+
+<script>
+	let person = {
+	    name: 'Lee'
+	};
+	let copy = person;
+
+	console.log(copy === person);
+
+	copy.name = 'Kim';
+	person.address = 'Seoul';
+
+	console.log('person',person);
+	console.log('copy',copy);
+</script>
+</body>
+</html>
