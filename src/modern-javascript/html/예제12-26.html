@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>예제12-26</title>
+</head>
+<body>
+<script>
+	$.ajax({
+		method: 'POST',
+		url: '/user',
+		data: {id: 1, name: 'Lee'},
+		cache: false
+	});
+</script>
+</body>
+</html>

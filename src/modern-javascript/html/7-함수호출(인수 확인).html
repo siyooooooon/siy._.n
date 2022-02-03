@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+</head>
+<body>
+
+<script>
+	/*function add(x, y) {
+	    return x + y;
+	}
+	console.log('add1 =',add(2));
+	console.log('add2 =',add('a','b'));
+*/
+	function add(x, y) {
+	    if (typeof x !== 'number' || typeof y !== 'number') {
+	        throw new TypeError('인수는 모두 숫자 값이어야 합니다.')
+	    }
+	    return x + y;
+	}
+	console.log('add =', add(2));
+	console.log('add a,b =', add('a','b'));
+</script>
+</body>
+</html>
