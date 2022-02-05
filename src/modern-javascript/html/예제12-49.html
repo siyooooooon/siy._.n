@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>예제12-49 콜백 함수</title>
+</head>
+<body>
+<script>
+    // n만큼 어떤 일을 반복한다.
+    function repeat(n) {
+        // i를 출력한다.
+        for (let i = 0; i < n; i++) console.log(i);
+    }
+    repeat(5);
+    // repeat 함수는 콘솔 로그 호출 console.log(i)에 강하게 의존하고 있어 다른 일을 할 수 없다.
+</script>
+</body>
+</html>

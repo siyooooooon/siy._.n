@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>예제12-50</title>
+</head>
+<body>
+<script>
+    // n만큼 어떤 일을 반복한다.
+    function repeat1(n) {
+        // i를 출력한다.
+        for (let i = 0; i < n; i++) console.log('repeat1', i);
+    }
+    repeat1( 5);
+
+    // n만큼 어떤 일을 반복한다.
+    function repeat2(n) {
+        for (let i = 0; i < n; i++) {
+            // i가 홀수일 떄만 출력한다.
+            if (i % 2) console.log('repeat2', i);
+        }
+    }
+    repeat2(5);
+</script>
+</body>
+</html>

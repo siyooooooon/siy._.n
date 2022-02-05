@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>예제12-44</title>
+</head>
+<body>
+<script>
+    function countdown(n) {
+        if(n < 0) return;
+        console.log(n);
+        countdown(n - 1); //재귀 호출
+    }
+
+    countdown(10);
+</script>
+</body>
+</html>

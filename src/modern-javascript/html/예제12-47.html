@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>예제12-47</title>
+</head>
+<body>
+<script>
+    function factorial (n) {
+        if (n <= 1) return 1;
+
+        let res = n;
+        while (--n) res *= n;
+        return res;
+    }
+
+    console.log('factorial0', factorial(0));
+    console.log('factorial1', factorial(1));
+    console.log('factorial2', factorial(2));
+    console.log('factorial3', factorial(3));
+    console.log('factorial4', factorial(4));
+    console.log('factorial5', factorial(5));
+
+    // 재귀 함수는 반복되는 처리를 반복문 없이 구현할 수 있다는 장점이 있지만 무한 반복에 빠질 위험이 있다
+    // 재귀 함수는 반복문을 사용하는 것보다 재귀 함수를 사용하는 편이 더 직관적으로 이해하기 쉬울 때만 한정적으로 사용하는것이 바람직하다.
+</script>
+</body>
+</html>
