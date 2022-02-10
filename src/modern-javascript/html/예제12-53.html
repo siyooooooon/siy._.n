@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>예제12-53</title>
+</head>
+<body>
+<script>
+    // 외부에서 전달받은 f를 n만큼 반복 호출한다.
+    function repeat(n, f) {
+        for (let i = 0; i < n; i++) {
+            f(i); // i를 전달하면서 f를 호출
+        }
+    }
+
+    //logOdds 함수는 단 한 번만 생성된다.
+    let logOdds = function(i) {
+        if(i % 2) console.log(i);
+    };
+
+    //고차 함수에 함수 참조를 전달한다.
+    repeat(5, logOdds); // 1,3
+</script>
+</body>
+</html>
