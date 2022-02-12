@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>예제13-1</title>
+</head>
+<body>
+<script>
+    function add(x, y) {
+        // 매개 변수는 함수 몸체 내부에서만 참조할 수 있다.
+        // 즉 매개 변수의 스코프는 함수 몸체 내부다
+        console.log('inside', x, y);
+        return x + y;
+    }
+
+    add(2, 5);
+
+    //매개 변수는 함수 몸체 내부에서만 참조할 수 있다.
+    console.log('outside', x, y);
+</script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>13-2 scope</title>
+</head>
+<body>
+
+<script>
+    let let1 = 1; // 코드의 가장 바깥 영역에서 선언한 변수
+
+    if (true) {
+        let let2 = 2; // 코드 불록 내에서 선언한 변수
+        if (true) {
+            let let3 = 3; // 중첩된 코드 블록 내에서 선언한 변수
+        }
+    }
+
+    function foo() {
+        let let4 = 4; // 함수 내에서 선언한 변수
+
+        function bar() {
+            let let5 = 5; // 중첩된 함수 내에서 선언한 변수
+        }
+    }
+
+    console.log('let1', let1);
+    console.log('let2', let2);
+    console.log('let3', let3);
+    console.log('let4', let4);
+    console.log('let5', let5);
+</script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>13-3 scope</title>
+</head>
+<body>
+<script>
+    let x = 'global';
+
+    function foo() {
+        let x = 'local';
+        console.log(x);
+    }
+
+    foo();
+
+    console.log(x);
+</script>
+</body>
+</html>
