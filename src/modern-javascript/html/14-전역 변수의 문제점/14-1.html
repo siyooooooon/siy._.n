@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>변수의 생명 주기 14-1</title>
+</head>
+<body>
+<script>
+    function foo() {
+        var x = 'local';
+        console.log('x = ', x);
+        return x;
+    }
+
+    foo();
+    console.log('전역 x = ', x);
+</script>
+</body>
+</html>

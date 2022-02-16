@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>14-7 모듈패턴</title>
+</head>
+<body>
+<script>
+    let Counter = (function () {
+        // private 변수
+        let num = 0;
+
+        // 외부로 공개할 데이터나 메서드를 프로퍼티로 추가한 객체를 반환한다.
+        return {
+            increase() {
+                return ++num;
+            },
+            decrease() {
+                return --num;
+            }
+        };
+    }());
+
+    // private 변수는 외부로 노출되지 않는다.
+    console.log('counter.num', Counter.num);
+
+    console.log(Counter.increase());
+    console.log(Counter.increase());
+    console.log(Counter.decrease());
+    console.log(Counter.decrease());
+
+</script>
+</body>
+</html>

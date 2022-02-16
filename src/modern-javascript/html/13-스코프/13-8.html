@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>13-8 함수레벨 스코프</title>
+</head>
+<body>
+<script>
+    let i = 10;
+
+    // for 문에서 선언한 i는 전역 변수다. 이미 선언된 전역변수 i가 있으므로 중복 선언된다.
+    for(let i = 0; i < 5; i++) {
+        console.log('전역변수 i', i); // 0 1 2 3 4
+    }
+
+    // var 로 선언시 의도치 않게 변수의 값이 변경되었다.
+    // let 으로 선언하면 변경 안됨.
+    console.log('변수 i', i);
+</script>
+</body>
+</html>

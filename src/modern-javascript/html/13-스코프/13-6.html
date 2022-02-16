@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>13-6</title>
+</head>
+<body>
+<script>
+// 전역 함수
+function foo() {
+    console.log('global function foo');
+}
+
+function bar() {
+    // 중첩 함수
+    function foo() {
+        console.log('local function foo');
+    }
+    foo();
+}
+
+bar();
+</script>
+</body>
+</html>

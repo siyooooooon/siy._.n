@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>함수 레벨 스코프</title>
+</head>
+<body>
+<script>
+    var x = 1;
+
+    if(true) {
+        // x는 전역 변수다. 이미 선언된 전역 변수 x가 있으므로 x 변수는 중복 선언된다.
+        // 이는 의도치 않게 변수값이 변경되는 부작용을 발생시킨다.
+        var x = 10;
+    }
+
+    console.log(x);
+</script>
+</body>
+</html>
