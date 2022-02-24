@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>16-1</title>
+</head>
+<body>
+<script>
+    const o = {};
+
+    // 내부 슬롯은 자바스크립트 엔진의 내부 로직이므로 직접 접근할 수 없다.
+    o.[[ Prototype ]]
+    console.log('proto', o.__proto__);
+</script>
+</body>
+</html>
