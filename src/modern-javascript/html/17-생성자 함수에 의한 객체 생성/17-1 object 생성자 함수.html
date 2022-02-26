@@ -6,7 +6,20 @@
 </head>
 <body>
 <script>
-    
+    // 빈 객체의 생성
+    const person = new Object();
+
+    // 프로퍼티 추가
+    person.name = 'Lee';
+    person.sayHello = function () {
+        console.log('Hi! My name is ' + this.name);
+    };
+
+    console.log(person);
+    person.sayHello();
+
+    // 생성자 함수란 new 연산자와 함께 호출하여 객체를 생성하는 함수
+    // 생성자 함수에 의해 생성된 객체를 인스턴스라 한다.
 </script>
 </body>
 </html>
