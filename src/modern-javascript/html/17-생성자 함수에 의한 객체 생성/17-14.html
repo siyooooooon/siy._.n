@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>17-14</title>
+</head>
+<body>
+<script>
+    function foo() {}
+
+    // 일반적인 함수로서 호출: [[Call]]이 호출된다.
+    foo();
+
+    // 생성자 함수로서 호출: [[Construct]]가 호출된다.
+    new foo();
+</script>
+</body>
+</html>
