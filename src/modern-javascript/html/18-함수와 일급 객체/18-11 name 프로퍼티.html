@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>name 프로퍼티</title>
+</head>
+<body>
+<script>
+    /*
+    * 함수 객체의 name프로퍼티는 함수 이름을 나타낸다.
+    */
+
+    // 기명 함수 표현식
+    let namedFunc = function foo() {};
+    console.log(namedFunc.name);
+
+    // 익명 함수 표현식
+    let anonymousFunc = function () {};
+    console.log(anonymousFunc.name);
+
+    // 함수 선언문
+    function bar() {}
+    console.log(bar.name);
+</script>
+</body>
+</html>

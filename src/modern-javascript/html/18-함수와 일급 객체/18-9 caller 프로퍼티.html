@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>caller 프로퍼티</title>
+</head>
+<body>
+<script>
+    function foo(func) {
+        return func();
+    }
+
+    function bar() {
+        return 'caller : ' + bar.caller; // caller는 없는 피로퍼티
+    }
+
+    console.log(foo(bar));
+    console.log(bar());
+
+</script>
+</body>
+</html>

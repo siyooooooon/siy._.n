@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>19-2</title>
+</head>
+<body>
+<script>
+    const circle = {
+        radius: 5,
+
+        // 원의 지름: 2r
+        getDiameter() {
+            return 2 * this.radius;
+        },
+
+        // 원의 둘레: 2파이r
+        getPerimeter() {
+            return 2 * Math.PI * this.radius;
+        },
+
+        // 원의 넓이: 파이r
+        getArea() {
+            return Math.PI * this.radius ** 2;
+        }
+    };
+
+    console.log(circle);
+
+    console.log(circle.getDiameter());
+    console.log(circle.getPerimeter());
+    console.log(circle.getArea());
+
+    /*
+    * 객체지향 프로그래밍은 객체의 상태를 나타내는 데이터와 상태 데이터를 조작할 수 있는 동작을 하나의 논리적인 단위로 묶어 생각한다.
+    * 객체는 상태 데이터와 동작을 하나의 논리적인 단위로 묶은 복합적인 자료구조라고 할 수 있다.
+    */
+</script>
+</body>
+</html>

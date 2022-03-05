@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>length 프로퍼티</title>
+</head>
+<body>
+<script>
+    function foo() {}
+    console.log(foo.length);
+
+    function bar(x) {
+        return x;
+    }
+    console.log(bar.length);
+
+    function bax(x, y) {
+        return x * y;
+    }
+    console.log(bax.length);
+
+    /*
+    * arguments 객체의 length 프로퍼티 함수, 객체의 length 프로퍼티의 값은 다를 수 있음
+    * arguments 객체의 length 프로퍼티는 인자의(arguments) 개수를 가리키고
+    * 함수 객체의 length 프로퍼티는 매개 변수의 개수를 가리킨다.
+    */
+</script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>arguments 객체의 Symbol프로퍼티</title>
+</head>
+<body>
+<script>
+    function multiply(x, y) {
+        // 이터레이터
+        const iterator = arguments[Symbol.iterator]();
+
+        // 이터레이터의 next 메서드를 호출하여 이터러브르 객체 arguments를 순회
+        console.log(iterator.next());
+        console.log(iterator.next());
+        console.log(iterator.next());
+        console.log(iterator.next());
+
+        return x * y;
+    }
+
+    multiply(1,2,3);
+
+    /*
+    * 선언된 매개변수의 개수와 함수를 호출할 때 전달하는 인수의 개수를 확인하지 않는 자바스크립트의 특성 때문에
+    * 함수가 호출되면 인수 개수를 확인하고 이에 따라 함수의 동작을 달리 정의할 필요가 있을 수 있다.
+    * arguments 객체는 매개변수 개수를 확정할 수 없는 가변 인자 함수를 구현할 때 유용하다.
+    */
+</script>
+</body>
+</html>

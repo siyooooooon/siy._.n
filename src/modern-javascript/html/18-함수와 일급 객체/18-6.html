@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>18-6</title>
+</head>
+<body>
+<script>
+    function sum() {
+        let res = 0;
+
+        // arguments 객체는 length 프로퍼티가 있는 유사 배열 객체이므로 for 문으로 순회할 수 있다.
+        for (let i = 0; i < arguments.length; i ++) {
+            res += arguments[i];
+        }
+        return res;
+    }
+
+    console.log(sum());
+    console.log(sum(1,2));
+    console.log(sum(1,2,3));
+
+    /*
+    * arguments 객체는 배열 형태로 인자 정보를 담고있지만 실제 배열이 아닌 유사 배열 객체(array-like object)다.
+    * 유사 배열 객체란 length 프로퍼티를 가진 객체로 for문으로 순회할 수 있는 객체다.
+    *
+    * 유사 배열 객체는 배열이 아니므로 배열 메서드를 사용할 경우 에러가 발생한다.
+    * 배열 메서드를 사용하려면 Function,prototype,call, Function.protorype.apply를 사용해 간접 호출해야하는 번거로움이 있다.
+    */
+</script>
+</body>
+</html>
