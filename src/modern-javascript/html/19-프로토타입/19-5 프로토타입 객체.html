@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>프로토타입 객체</title>
+</head>
+<body>
+<script>
+    /*
+    * 모든 객체는 하나의 프로토타입을 갖는다. 모든 프로토타입은 생성자 함수와 연결되어있다.
+    * [[Prototype]] 내부 슬롯에는 직접 접근할 수 없지만 __proto__ 접근자 프로퍼티를 통해 자신의 프로토타입,
+    * 자신의 [[Prototype]] 내부 슬롯이 가리키는 프로토타입에 간접적으로 접근할 수 있다.
+    * 프로토타입은 자신의 constructor 프로퍼티를 통해 생성자 함수에 접근할 수 있고
+    * 생성자 함수는 자신의 prototype 프로퍼티를 통해 프로토타입에 접근할 수 있다.
+    */
+
+    // __proto__ 접근자 프로퍼티
+    /*
+    * 모든 객체는 __proto__ 접근자 프로퍼티를 통해 자신의 프로토타입 [[Prototype]] 내부 슬롯에 간접적으로 접글할 수 있다.
+    */
+    const person = { name: 'Lee'};
+</script>
+</body>
+</html>
