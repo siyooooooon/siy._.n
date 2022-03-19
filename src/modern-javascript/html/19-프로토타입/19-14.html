@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>19-14</title>
+</head>
+<body>
+<script>
+    // 생성자 함수
+    function Person(name) {
+        this.name = name;
+    }
+
+    const me =new Person('Lee');
+
+    // me 객체의 생성자 함수는 Person이다.
+    console.log(me.constructor === Person);
+</script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>19-11</title>
+</head>
+<body>
+<script>
+    // 함수 객체는 prototype 프로퍼티를 소유한다.
+    (function () {}).hasOwnProperty('prototype');
+
+    // 일반 객체는 prototype 프로퍼티를 소유하지 않는다.
+    ({}).hasOwnProperty('prototype');
+</script>
+</body>
+</html>
