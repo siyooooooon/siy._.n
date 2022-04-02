@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>19-33</title>
+</head>
+<body>
+<script>
+    function Person(name) {
+        this.name = name;
+    }
+
+    // 프로토타입 메서드
+    Person.prototype.sayHello = function () {
+        console.log(`Hi! My name is ${this.name}`);
+    };
+
+    const me = new Person('Lee');
+
+    // hasOwnProperty는 Object.prototype의 메서드다.
+    console.log(me.hasOwnProperty('name'));
+
+    Object.prototype.hasOwnProperty.call(me, 'name');
+
+    /* Call 메서드는 this로 사용할 객체를 전달하면서 함수를 호출한다.
+    * this로 사용할 me 객체를 전달하면서 Object.prototype.hasOwnProperty 메서드를 호출한다.*/
+
+</script>
+</body>
+</html>

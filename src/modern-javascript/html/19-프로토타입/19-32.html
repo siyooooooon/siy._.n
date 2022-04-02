@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>19-32</title>
+</head>
+<body>
+<script>
+    /* 자바스크립트는 객체의 프로퍼티에 접근하려고 할 때 해당 객체에 접근하려는 프로퍼티가 없다면
+    * [[Prototype]] 내부 슬롯의 참조를 따라 자신의 부모 역할을 하는 프로토타입의 프로퍼티를 순차적으로 검색 - 프로토타입 체인
+    * 프로토타입 체인은 자바스크립트가 객체지향 프로그래밍의 상속을 구현하는 메커니즘이다.
+    */
+    function Person(name) {
+        this.name = name;
+    }
+
+    // 프로토타입 메서드
+    Person.prototype.sayHello = function () {
+        console.log(`Hi! My name is ${this.name}`);
+    };
+
+    const me = new Person('Lee');
+
+    // hasOwnProperty는 Object.prototype의 메서드다.
+    console.log(me.hasOwnProperty('name'));
+
+    me.hasOwnProperty('name');
+</script>
+</body>
+</html>
