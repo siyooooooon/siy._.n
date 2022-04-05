@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>19-40</title>
+</head>
+<body>
+<script>
+    const Person = (function () {
+        function Person(name) {
+            this.name = name;
+        }
+
+        // 1. 생성자 함수의 prototype 프로퍼티를 통해 프로토타입을 교체
+        Person.prototype = {
+            sayHello() {
+                console.log(`Hi! My name is ${this.name}`);
+            }
+        };
+        return Person;
+    }());
+
+    const me = new Person('Lee');
+
+    /*
+    * 1에서 Person.prototype에 객체 리터럴을 할당했다. 이는 Person 생성자 함수가 생성할 객체의 프로토타입을 객체 리터럴로 교체한 것이다.
+    * 프로토타입으로 교체한 객체 리터럴에는 constructor 프로퍼티가 없다. constructor 프로퍼티는 자바스크립트 엔진이 프로토타입을 생성할 때 암묵적으로 추가한 프로퍼티다.
+    * me 객체의 생성자 함수를 검색하면 Person이 아닌 Object가 나온다.*/
+</script>
+</body>
+</html>
